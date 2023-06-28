@@ -5,19 +5,28 @@ console.log("EXERCISE 1:\n==========\n");
 
 function printOdds(num){
 
+    let isNegative = false
     if(num < 0){
         num *= -1;
+        isNegative = true;
     }
 
     for(let i = 0; i < num; i++){
         if(i % 2 == 1){
-            console.log(i);
+            if(isNegative){
+                console.log(-i);
+            }
+            else{
+                console.log(i);
+            }
+
         }
     }
 
 }
 
 printOdds(18);
+printOdds(-32)
 
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
